@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>skrollr - parallax scrolling for the masses</title>
+
+	<link href="examples/fixed-positioning.css" rel="stylesheet" type="text/css" />
+	<link href="examples/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
+	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
+	<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div -->
+
+	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
+
+	<!-- First Slide... Hello --> 
+	<div id="intro" data-0="opacity:1;right:10%;transform:rotate(0deg);transform-origin:0 0;" data-800="opacity:0;right:20%;transform:rotate(-0deg);">
+		<img src="images/temp_text.png" />
+	</div>
+
+	<!-- Slide 1 - Linx--> 
+	<div class="slide1" data-0="height:0%;bottom:0%;" data-1500="height:100%;bottom:0%;">Slide 1</div>
+	<div id="transform" data-900="transform:scale(0);left:0%;top:-10%;" data-1200="transform:scale(1);opacity:1;left:40.5%;top:0%;">
+		<img src="images/temp_linx_head.png" />
+	</div>
+	<div id="transform" data-600="left:0%;margin-left:-150%" data-1500="left:0%;margin-left:0%">
+		<img src="images/temp_linx.png" />
+	</div>
+	<div class="slide2" data-1500="height:0%;bottom:0%;" data-3000="height:100%;bottom:0%;">Slide 2</div>
+	<div id="transform" data-900="transform:scale(0);left:0%;top:-10%;" data-1200="transform:scale(1);opacity:1;left:40.5%;top:0%;">
+		
+	</div>
+	<!-- Slide 2 .. Mobilex --> 
+	<div class="mbx-pat-1" data-2800="margin-top:-40%;" data-3000="margin-top:10%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-2" data-2900="margin-top:-30%;" data-3000="margin-top:10%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-3" data-2600="margin-top:-20%;" data-3000="margin-top:10%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-4" data-2700="margin-top:-50%;" data-3000="margin-top:10%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-5" data-2500="margin-top:-40%;" data-3000="margin-top:10%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-6" data-2950="margin-top:-35%;" data-3000="margin-top:10%;"><img src="images/mbx_pattern1.png" /></div>
+
+	<div class="mbx-pat-1" data-2800="margin-top:-70%;" data-3000="margin-top:30%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-2" data-2900="margin-top:-60%;" data-3000="margin-top:30%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-3" data-2600="margin-top:-50%;" data-3000="margin-top:30%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-4" data-2700="margin-top:-40%;" data-3000="margin-top:30%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-5" data-2500="margin-top:-80%;" data-3000="margin-top:30%;"><img src="images/mbx_pattern1.png" /></div>
+	<div class="mbx-pat-6" data-2950="margin-top:-65%;" data-3000="margin-top:30%;"><img src="images/mbx_pattern1.png" /></div>
+
+
+	<!-- div id="properties" data-1700="top:100%;" data-2200="top:0%;" data-3000="display:block;" data-3700="top:-100%;display:none;">
+		<h2>all numeric properties</h2>
+		<p>width, height, padding, font-size, z-index, blah blah blah</p>
+	</div -->
+
+	<div id="easing_wrapper" data-0="display:none;" data-3900="display:block;" data-4900="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-5900="background:rgba(0,0,0,1);color:rgb(255,255,255);" data-10000="top:0%;" data-12000="top:-100%;">
+		<div id="easing" data-3900="left:100%" data-4600="left:25%;">
+			<h2>easing?</h2>
+			<p>sure.</p>
+			<p>let me dim the <span data-3900="" data-4900="color[swing]:rgb(0,0,0);" data-5900="color:rgb(255,255,0);">lights</span> for this one...</p>
+			<p data-5900="opacity:0;font-size:100%;" data-6500="opacity:1;font-size:150%;">you can set easings for each property and define own easing functions</p>
+		</div>
+
+		<div class="drop" data-6500="left:15%;bottom:100%;" data-9500="bottom:0%;">linear</div>
+		<div class="drop" data-6500="left:25%;bottom[quadratic]:100%;" data-9500="bottom:0%;">quadratic</div>
+		<div class="drop" data-6500="left:35%;bottom[cubic]:100%;" data-9500="bottom:0%;">cubic</div>
+		<div class="drop" data-6500="left:45%;bottom[swing]:100%;" data-9500="bottom:0%;">swing</div>
+		<div class="drop" data-6500="left:55%;bottom[WTF]:100%;" data-9500="bottom:0%;">WTF</div>
+		<div class="drop" data-6500="left:65%;bottom[inverted]:100%;" data-9500="bottom:0%;">inverted</div>
+		<div class="drop" data-6500="left:75%;bottom[bounce]:100%;" data-9500="bottom:0%;">bounce</div>
+	</div>
+
+
+
+
+
+	<div id="download" data-10000="top[cubic]:100%;border-radius[cubic]:0em;background:rgb(0,50,100);border-width:0px;" data-12000="top:10%;border-radius:2em;background:rgb(190,230,255);border-width:10px;">
+	</div>
+
+
+
+
+
+
+
+	<div id="scrollbar" data-0="top:0%;margin-top:2px;" data-end="top:100%;margin-top:-52px;"></div>
+
+	<script type="text/javascript" src="dist/skrollr.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="dist/skrollr.ie.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+</body>
+
+</html>
